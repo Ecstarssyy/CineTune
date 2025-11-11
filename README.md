@@ -74,7 +74,7 @@ Proyek ini disusun dan dikembangkan oleh:
 | Nama Lengkap | NIM |
 | :--- | :--- |
 | Sulthan Fatih Pradewa | [NIM_ANDA] |
-| Muhammad Fauzi Azizi | [NIM_ANDA] |
+| Muhammad Fauzi Azizi | [122140106] |
 | Ihya Razky Hidayat | [NIM_ANDA] |
 
 ---
