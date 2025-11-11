@@ -73,9 +73,9 @@ Proyek ini disusun dan dikembangkan oleh:
 
 | Nama Lengkap | NIM |
 | :--- | :--- |
-| Sulthan Fatih Pradewa | [NIM_ANDA] |
+| Sulthan Fatih Pradewa | [122140183] |
 | Muhammad Fauzi Azizi | [122140106] |
-| Ihya Razky Hidayat | [NIM_ANDA] |
+| Ihya Razky Hidayat | [122140167] |
 
 ---
-*Proyek ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Sistem Transmisi Multimedia [Nama Universitas Anda].*
+*Proyek ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Sistem Teknologi Multimedia IF25-40305.*
