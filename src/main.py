@@ -1,29 +1,32 @@
-import cv2
-from vision.gesture_detector import GestureDetector
-from vision.gesture_mapper import GestureMapper
+import sys
+import os
 
-detector = GestureDetector()
-mapper = GestureMapper()
+# Add ui directory to path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-cap = cv2.VideoCapture(0)
+from ui.frame_utama import CineTuneApp
 
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
+def main():
+    """Main entry point"""
+    print("=" * 50)
+    print("  CineTune - Tebak Film Lewat Gesture")
+    print("=" * 50)
+    print()
+    
+    try:
+        app = CineTuneApp()
+        app.run()
+    except KeyboardInterrupt:
+        print("\n[INFO] Application interrupted by user")
+    except Exception as e:
+        print(f"[ERROR] Application error: {e}")
+        import traceback
+        traceback.print_exc()
+    finally:
+        try:
+            app.cleanup()
+        except:
+            pass
 
-    frame = cv2.flip(frame, 1)
-
-    landmarks, frame = detector.detect(frame)
-    gesture = mapper.map(landmarks)
-
-    cv2.putText(frame, f"Gesture: {gesture}", (10, 40),
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
-
-    cv2.imshow("Gesture Mapping Test", frame)
-
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
+if __name__ == "__main__":
+    main()
